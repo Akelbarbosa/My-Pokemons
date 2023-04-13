@@ -9,23 +9,67 @@
 /* Begin PBXBuildFile section */
 		C456707B29D4C3A800B49DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456707A29D4C3A800B49DF8 /* AppDelegate.swift */; };
 		C456707D29D4C3A800B49DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456707C29D4C3A800B49DF8 /* SceneDelegate.swift */; };
-		C456707F29D4C3A800B49DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456707E29D4C3A800B49DF8 /* ViewController.swift */; };
-		C456708229D4C3A800B49DF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C456708029D4C3A800B49DF8 /* Main.storyboard */; };
 		C456708529D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C456708329D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld */; };
 		C456708729D4C3AB00B49DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C456708629D4C3AB00B49DF8 /* Assets.xcassets */; };
 		C456708A29D4C3AB00B49DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */; };
+		C4955DFD29E4A5A9006FDEE2 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */; };
+		C4955DFF29E4A5C5006FDEE2 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */; };
+		C4955E0129E4A5E9006FDEE2 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */; };
+		C4955E0429E4A627006FDEE2 /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955E0329E4A627006FDEE2 /* LogInRouter.swift */; };
+		C4955E0729E4A6D1006FDEE2 /* LogInEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955E0629E4A6D1006FDEE2 /* LogInEntity.swift */; };
+		C4A66B1229E5E5D200E0EB8C /* Extension+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B1129E5E5D200E0EB8C /* Extension+UITextField.swift */; };
+		C4A66B1429E6193A00E0EB8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4A66B1329E6193A00E0EB8C /* GoogleService-Info.plist */; };
+		C4A66B1729E619C600E0EB8C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C4A66B1629E619C600E0EB8C /* FirebaseAuth */; };
+		C4A66B1929E619C600E0EB8C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C4A66B1829E619C600E0EB8C /* FirebaseDatabase */; };
+		C4A66B1B29E619C600E0EB8C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C4A66B1A29E619C600E0EB8C /* FirebaseFirestore */; };
+		C4A66B1D29E619C600E0EB8C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C4A66B1C29E619C600E0EB8C /* FirebaseStorage */; };
+		C4A66B2029E6237700E0EB8C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B1F29E6237700E0EB8C /* SignUpView.swift */; };
+		C4A66B2229E6239C00E0EB8C /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2129E6239C00E0EB8C /* SignUpInteractor.swift */; };
+		C4A66B2429E623B400E0EB8C /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2329E623B400E0EB8C /* SignUpPresenter.swift */; };
+		C4A66B2629E623CF00E0EB8C /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2529E623CF00E0EB8C /* SignUpRouter.swift */; };
+		C4A66B2829E70DE600E0EB8C /* SignUpEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2729E70DE600E0EB8C /* SignUpEntity.swift */; };
+		C4A66B2A29E70EF200E0EB8C /* ManagerFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2929E70EF100E0EB8C /* ManagerFirebase.swift */; };
+		C4A66B2D29E716DE00E0EB8C /* SignUpErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2C29E716DE00E0EB8C /* SignUpErrors.swift */; };
+		C4A66B3029E7194500E0EB8C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B2F29E7194500E0EB8C /* Extension+String.swift */; };
+		C4A66B3629E8627100E0EB8C /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B3529E8627100E0EB8C /* PasswordTextField.swift */; };
+		C4A66B3829E866C600E0EB8C /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B3729E866C600E0EB8C /* EmailTextField.swift */; };
+		C4A66B3A29E8679E00E0EB8C /* ErrorMessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A66B3929E8679E00E0EB8C /* ErrorMessageLabel.swift */; };
+		C4A66B4F29E8B62700E0EB8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A66B5129E8B62700E0EB8C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C456707729D4C3A800B49DF8 /* My Pokemons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Pokemons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C456707A29D4C3A800B49DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C456707C29D4C3A800B49DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C456707E29D4C3A800B49DF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C456708129D4C3A800B49DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C456708429D4C3A800B49DF8 /* My_Pokemons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Pokemons.xcdatamodel; sourceTree = "<group>"; };
 		C456708629D4C3AB00B49DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C456708929D4C3AB00B49DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C456708B29D4C3AB00B49DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
+		C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		C4955E0329E4A627006FDEE2 /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
+		C4955E0629E4A6D1006FDEE2 /* LogInEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEntity.swift; sourceTree = "<group>"; };
+		C4A66B1129E5E5D200E0EB8C /* Extension+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextField.swift"; sourceTree = "<group>"; };
+		C4A66B1329E6193A00E0EB8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4A66B1F29E6237700E0EB8C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C4A66B2129E6239C00E0EB8C /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		C4A66B2329E623B400E0EB8C /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		C4A66B2529E623CF00E0EB8C /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		C4A66B2729E70DE600E0EB8C /* SignUpEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEntity.swift; sourceTree = "<group>"; };
+		C4A66B2929E70EF100E0EB8C /* ManagerFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFirebase.swift; sourceTree = "<group>"; };
+		C4A66B2C29E716DE00E0EB8C /* SignUpErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpErrors.swift; sourceTree = "<group>"; };
+		C4A66B2F29E7194500E0EB8C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		C4A66B3529E8627100E0EB8C /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		C4A66B3729E866C600E0EB8C /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		C4A66B3929E8679E00E0EB8C /* ErrorMessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageLabel.swift; sourceTree = "<group>"; };
+		C4A66B5029E8B62700E0EB8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4A66B5229E8B65700E0EB8C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C4A66B5329E8B65700E0EB8C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4A66B5429E8B65E00E0EB8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C4A66B5529E8B65E00E0EB8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4A66B5629E8B66900E0EB8C /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C4A66B5729E8B66900E0EB8C /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A66B1929E619C600E0EB8C /* FirebaseDatabase in Frameworks */,
+				C4A66B1D29E619C600E0EB8C /* FirebaseStorage in Frameworks */,
+				C4A66B1729E619C600E0EB8C /* FirebaseAuth in Frameworks */,
+				C4A66B1B29E619C600E0EB8C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +90,10 @@
 		C456706E29D4C3A800B49DF8 = {
 			isa = PBXGroup;
 			children = (
+				C4A66B5129E8B62700E0EB8C /* Localizable.strings */,
 				C456707929D4C3A800B49DF8 /* My Pokemons */,
+				C4A66B3429E8625D00E0EB8C /* Utils */,
+				C4A66B1329E6193A00E0EB8C /* GoogleService-Info.plist */,
 				C456707829D4C3A800B49DF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,16 +109,78 @@
 		C456707929D4C3A800B49DF8 /* My Pokemons */ = {
 			isa = PBXGroup;
 			children = (
-				C456707A29D4C3A800B49DF8 /* AppDelegate.swift */,
-				C456707C29D4C3A800B49DF8 /* SceneDelegate.swift */,
-				C456707E29D4C3A800B49DF8 /* ViewController.swift */,
-				C456708029D4C3A800B49DF8 /* Main.storyboard */,
+				C4A66B2E29E7192000E0EB8C /* Extensions */,
+				C4A66B2B29E70EFB00E0EB8C /* Manager */,
+				C4955E0529E4A63F006FDEE2 /* Delegates */,
+				C4A66B1E29E61F9800E0EB8C /* SignUp */,
+				C456709129D4C81500B49DF8 /* LogIn */,
 				C456708629D4C3AB00B49DF8 /* Assets.xcassets */,
 				C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */,
 				C456708B29D4C3AB00B49DF8 /* Info.plist */,
 				C456708329D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld */,
 			);
 			path = "My Pokemons";
+			sourceTree = "<group>";
+		};
+		C456709129D4C81500B49DF8 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */,
+				C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */,
+				C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */,
+				C4955E0629E4A6D1006FDEE2 /* LogInEntity.swift */,
+				C4955E0329E4A627006FDEE2 /* LogInRouter.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		C4955E0529E4A63F006FDEE2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C456707A29D4C3A800B49DF8 /* AppDelegate.swift */,
+				C456707C29D4C3A800B49DF8 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C4A66B1E29E61F9800E0EB8C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C4A66B1F29E6237700E0EB8C /* SignUpView.swift */,
+				C4A66B2129E6239C00E0EB8C /* SignUpInteractor.swift */,
+				C4A66B2329E623B400E0EB8C /* SignUpPresenter.swift */,
+				C4A66B2529E623CF00E0EB8C /* SignUpRouter.swift */,
+				C4A66B2729E70DE600E0EB8C /* SignUpEntity.swift */,
+				C4A66B2C29E716DE00E0EB8C /* SignUpErrors.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C4A66B2B29E70EFB00E0EB8C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C4A66B2929E70EF100E0EB8C /* ManagerFirebase.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C4A66B2E29E7192000E0EB8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4A66B1129E5E5D200E0EB8C /* Extension+UITextField.swift */,
+				C4A66B2F29E7194500E0EB8C /* Extension+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C4A66B3429E8625D00E0EB8C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C4A66B3529E8627100E0EB8C /* PasswordTextField.swift */,
+				C4A66B3729E866C600E0EB8C /* EmailTextField.swift */,
+				C4A66B3929E8679E00E0EB8C /* ErrorMessageLabel.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +199,12 @@
 			dependencies = (
 			);
 			name = "My Pokemons";
+			packageProductDependencies = (
+				C4A66B1629E619C600E0EB8C /* FirebaseAuth */,
+				C4A66B1829E619C600E0EB8C /* FirebaseDatabase */,
+				C4A66B1A29E619C600E0EB8C /* FirebaseFirestore */,
+				C4A66B1C29E619C600E0EB8C /* FirebaseStorage */,
+			);
 			productName = "My Pokemons";
 			productReference = C456707729D4C3A800B49DF8 /* My Pokemons.app */;
 			productType = "com.apple.product-type.application";
@@ -112,8 +231,14 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				de,
+				"es-419",
 			);
 			mainGroup = C456706E29D4C3A800B49DF8;
+			packageReferences = (
+				C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C456707829D4C3A800B49DF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,8 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C456708A29D4C3AB00B49DF8 /* LaunchScreen.storyboard in Resources */,
+				C4A66B4F29E8B62700E0EB8C /* Localizable.strings in Resources */,
+				C4A66B1429E6193A00E0EB8C /* GoogleService-Info.plist in Resources */,
 				C456708729D4C3AB00B49DF8 /* Assets.xcassets in Resources */,
-				C456708229D4C3A800B49DF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +267,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C456707F29D4C3A800B49DF8 /* ViewController.swift in Sources */,
+				C4A66B2D29E716DE00E0EB8C /* SignUpErrors.swift in Sources */,
+				C4A66B1229E5E5D200E0EB8C /* Extension+UITextField.swift in Sources */,
+				C4A66B3629E8627100E0EB8C /* PasswordTextField.swift in Sources */,
+				C4955DFD29E4A5A9006FDEE2 /* LogInView.swift in Sources */,
+				C4A66B3029E7194500E0EB8C /* Extension+String.swift in Sources */,
+				C4955DFF29E4A5C5006FDEE2 /* LogInInteractor.swift in Sources */,
+				C4955E0729E4A6D1006FDEE2 /* LogInEntity.swift in Sources */,
+				C4A66B2A29E70EF200E0EB8C /* ManagerFirebase.swift in Sources */,
+				C4955E0129E4A5E9006FDEE2 /* LogInPresenter.swift in Sources */,
 				C456708529D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld in Sources */,
+				C4A66B2429E623B400E0EB8C /* SignUpPresenter.swift in Sources */,
+				C4A66B3829E866C600E0EB8C /* EmailTextField.swift in Sources */,
+				C4A66B2029E6237700E0EB8C /* SignUpView.swift in Sources */,
+				C4A66B2629E623CF00E0EB8C /* SignUpRouter.swift in Sources */,
 				C456707B29D4C3A800B49DF8 /* AppDelegate.swift in Sources */,
+				C4A66B2229E6239C00E0EB8C /* SignUpInteractor.swift in Sources */,
+				C4955E0429E4A627006FDEE2 /* LogInRouter.swift in Sources */,
+				C4A66B3A29E8679E00E0EB8C /* ErrorMessageLabel.swift in Sources */,
+				C4A66B2829E70DE600E0EB8C /* SignUpEntity.swift in Sources */,
 				C456707D29D4C3A800B49DF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,20 +293,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C456708029D4C3A800B49DF8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C456708129D4C3A800B49DF8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C456708929D4C3AB00B49DF8 /* Base */,
+				C4A66B5229E8B65700E0EB8C /* fr */,
+				C4A66B5429E8B65E00E0EB8C /* de */,
+				C4A66B5629E8B66900E0EB8C /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C4A66B5129E8B62700E0EB8C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A66B5029E8B62700E0EB8C /* en */,
+				C4A66B5329E8B65700E0EB8C /* fr */,
+				C4A66B5529E8B65E00E0EB8C /* de */,
+				C4A66B5729E8B66900E0EB8C /* es-419 */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -174,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -234,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -296,7 +446,6 @@
 				INFOPLIST_FILE = "My Pokemons/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +473,6 @@
 				INFOPLIST_FILE = "My Pokemons/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,6 +510,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4A66B1629E619C600E0EB8C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C4A66B1829E619C600E0EB8C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		C4A66B1A29E619C600E0EB8C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C4A66B1C29E619C600E0EB8C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A66B1529E619C600E0EB8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C456708329D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld */ = {

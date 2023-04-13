@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  My Pokemons
+
+  Created by Akel Barbosa on 13/04/23.
+  
+*/
+
+// Log In
+"log_in" = "Log In";
+"email" = "Email";
+"password" = "Password";
+
+
+//Sign Up
+
+"sign_up" = "Sign Up";
+"confirm_password" = "Confirm Password";
+"sign_up_success" = "Sign Up Success";
+"account_create_success" = "Your account has been successfully created.";
+
+"fieldsAreEmpty" = "The field is empty.";
+"emailIsEmpty" = "The email field is empty.";
+"passwordIsEmpty" = "The password field is empty.";
+"confirmPasswordIsEmpty" = "The confirm password field is empty.";
+"invalidEmail" = "The entered email is invalid.";
+"passwordIsShort" = "The password must be at least 8 characters long.";
+"passwordsDifferent" = "The entered passwords do not match.";
+"emailExist" = "The email is already registered.";
