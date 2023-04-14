@@ -27,3 +27,6 @@
 "passwordIsShort" = "The password must be at least 8 characters long.";
 "passwordsDifferent" = "The entered passwords do not match.";
 "emailExist" = "The email is already registered.";
+
+"wrongPassword" = "Incorrect password";
+"userNotFound" = "Email not registered";

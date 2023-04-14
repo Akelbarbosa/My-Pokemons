@@ -26,4 +26,5 @@
 "passwordsDifferent" = "Las contraseñas ingresadas no coinciden.";
 "emailExist" = "El correo electrónico ya está registrado.";
 
-
+"wrongPassword" = "Contraseña incorrecta";
+"userNotFound" = "Email no está registrado";

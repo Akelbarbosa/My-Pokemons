@@ -45,7 +45,6 @@ class SignUpPresenter: SignUpPresenterProtocolInput {
             } catch {
                 let errorInField = error as? SignUpErrors
                 handleError(error: errorInField )
-                output?.isLoading(status: false)
             }
         }
     }
@@ -89,6 +88,7 @@ class SignUpPresenter: SignUpPresenterProtocolInput {
     }
 
     private func handleError(error: SignUpErrors?) {
+        output?.isLoading(status: false)
         guard let error = error else {return}
         let message = error.text()
         switch error {
@@ -126,7 +126,6 @@ extension SignUpPresenter: SignUpInteractorProtocolOutput  {
     
     func registerNewUserFailure(error: NSError?) {
         guard let error = error else {return}
-        output?.isLoading(status: false)
     
         switch AuthErrorCode.Code(rawValue: error.code) {
         case .emailAlreadyInUse:
@@ -136,6 +135,7 @@ extension SignUpPresenter: SignUpInteractorProtocolOutput  {
             handleError(error: SignUpErrors.invalidEmail)
             
         default:
+            output?.isLoading(status: false)
             print(error.localizedDescription)
             break
         }

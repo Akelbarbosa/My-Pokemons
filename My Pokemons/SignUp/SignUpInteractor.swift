@@ -32,7 +32,7 @@ class SignUpInteractor: SignUpInteractorProtocolInput {
     
     func registerNewUser(credential: SignUpEntity) async {
         do {
-            let auth = try await manager.registerNewUser(credentials: credential)
+            try await manager.registerNewUser(credentials: credential)
             output?.registerNewUserSuccess()
         } catch  {
             output?.registerNewUserFailure(error: error as NSError)

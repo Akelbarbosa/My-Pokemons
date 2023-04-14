@@ -1,27 +1,25 @@
 //
-//  SignUpErrors.swift
+//  LogInErrors.swift
 //  My Pokemons
 //
-//  Created by Akel Barbosa on 12/04/23.
+//  Created by Akel Barbosa on 14/04/23.
 //
 
 import Foundation
 
-enum SignUpErrors: String, Error {
+enum LogInErrors: String, Error {
    
     // Field error
     case fieldsAreEmpty
-    
     case emailIsEmpty
-    case passwordIsEmpty
-    case confirmPasswordIsEmpty
-
     case invalidEmail
+    case passwordIsEmpty
+
     case passwordIsShort
-    case passwordsDifferent
+    case passwordInvalid
     
-    // Firebase Error
-    case emailExist
+    case wrongPassword
+    case userNotFound
     
     func text() -> String {
         return NSLocalizedString("\(self)", comment: "")

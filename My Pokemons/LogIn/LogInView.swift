@@ -8,6 +8,8 @@
 import UIKit
 
 class LogInView: UIViewController {
+    //MARK: - Variables
+    var fieldWithError: [UITextField: UILabel] = [:]
     
     //MARK: - Initializers
     var presenter: LogInPresenterProtocolInput
@@ -36,28 +38,21 @@ class LogInView: UIViewController {
         return image
     }()
     
-    private var emailField: UITextField = {
-        let field = UITextField()
-        field.textContentType = .emailAddress
-        field.autocorrectionType = .yes
-        field.keyboardType = .emailAddress
-        field.placeholder = NSLocalizedString("email", comment: "")
-        field.translatesAutoresizingMaskIntoConstraints = false
-        return field
-    }()
+    // Fields 
+    lazy var emailField = EmailTextField()
+    lazy var passwordField = PasswordTextField()
     
-    private var passwordField: UITextField = {
-        let field = UITextField()
-        field.textContentType = .password
-        field.isSecureTextEntry = true
-        field.placeholder = NSLocalizedString("password", comment: "")
-        field.translatesAutoresizingMaskIntoConstraints = false
-        return field
-    }()
+    //Error Label
+    lazy var emailErrorLabel = ErrorMessageLabel()
+    lazy var passwordErrorLabel = ErrorMessageLabel()
     
+    // Buttons
     private var logInButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = NSLocalizedString("log_in", comment: "")
+        configuration.imagePadding = 10
         let button = UIButton()
-        button.setTitle(NSLocalizedString("log_in", comment: ""), for: .normal)
+        button.configuration = configuration
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -75,6 +70,7 @@ class LogInView: UIViewController {
     //MARK: - UI Configurations
     private func configureUI() {
         
+        // Content
         view.addSubview(stackField)
         stackField.axis = .vertical
         stackField.distribution = .equalSpacing
@@ -91,7 +87,7 @@ class LogInView: UIViewController {
             stackField.widthAnchor.constraint(greaterThanOrEqualTo: view.widthAnchor, multiplier: 0.8)
         ])
               
-        
+        // Logo
         view.addSubview(logoImage)
         logoImage.image = UIImage(named: "pokemon-logo")
         
@@ -106,11 +102,9 @@ class LogInView: UIViewController {
         logoImage.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
         logoImage.heightAnchor.constraint(lessThanOrEqualToConstant: 110).isActive = true
         
-        
+        // Email Field
         stackField.addArrangedSubview(emailField)
-        emailField.layer.cornerRadius = .pi * 2
-        emailField.backgroundColor = .tertiarySystemGroupedBackground
-        emailField.font = .preferredFont(forTextStyle: .body)
+        emailField.placeholder = NSLocalizedString("email", comment: "")
         emailField.insertPaddingLeft(left: 5)
         emailField.heightAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true
         emailField.heightAnchor.constraint(lessThanOrEqualToConstant: 60).isActive = true
@@ -118,24 +112,35 @@ class LogInView: UIViewController {
         
         emailField.delegate = self
         
+        // Email Error Label
+        emailErrorLabel.isHidden = true
+        stackField.addArrangedSubview(emailErrorLabel)
+        
+        
+        // Password Field
         stackField.addArrangedSubview(passwordField)
-        passwordField.layer.cornerRadius = .pi * 2
-        passwordField.backgroundColor = .tertiarySystemGroupedBackground
-        passwordField.font = .preferredFont(forTextStyle: .body)
+        passwordField.placeholder = NSLocalizedString("password", comment: "")
         passwordField.insertPaddingLeft(left: 5)
         passwordField.heightAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true
         passwordField.heightAnchor.constraint(lessThanOrEqualToConstant: 60).isActive = true
         
         passwordField.delegate = self
         
+        // Error Password Label
+        passwordErrorLabel.isHidden = true
+        stackField.addArrangedSubview(passwordErrorLabel)
+        
+        // Log In button
         stackField.addArrangedSubview(logInButton)
         logInButton.layer.cornerRadius = .pi * 2
-        logInButton.backgroundColor = .systemGreen
+        logInButton.configuration?.baseBackgroundColor = .systemGreen
         logInButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
         logInButton.heightAnchor.constraint(lessThanOrEqualToConstant: 55).isActive = true
         
-        stackField.addArrangedSubview(signUpButton)
+        logInButton.addTarget(self, action: #selector(logInButtonAction), for: .touchUpInside)
         
+        //Sign Up button
+        stackField.addArrangedSubview(signUpButton)
         signUpButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
         signUpButton.heightAnchor.constraint(lessThanOrEqualToConstant: 55).isActive = true
         
@@ -156,29 +161,137 @@ class LogInView: UIViewController {
         mainControllerConfiguration()
         configureUI()
     }
-    
+        
+    //MARK: - Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
-    //MARK: -
+    @objc func logInButtonAction() {
+        view.endEditing(true)
+        presenter.loginAuth(email: emailField.text, password: passwordField.text)
+    }
+    
     @objc func signUpButtonAction() {
-        presenter.tappedSignUp()
+        view.endEditing(true)
+        presenter.goToSignUp()
+    }
+    
+}
+
+
+//MARK: - Private Method
+extension LogInView {
+    
+    private func showError(for fields: [UITextField: UILabel], withMessage message: String) {
+        for (textField, label) in fields {
+            DispatchQueue.main.async {
+                // Crea un label para mostrar el mensaje de error
+                label.text = message
+                label.isHidden = false
+                
+                
+                // Configura el borde del textfield para que sea rojo
+                textField.layer.borderWidth = 1.0
+                textField.layer.borderColor = UIColor(ciColor: .red).cgColor
+                
+                // Hace vibrar el textfield
+                let animation = CABasicAnimation(keyPath: "position")
+                animation.duration = 0.05
+                animation.repeatCount = 2
+                animation.autoreverses = true
+                animation.fromValue = NSValue(cgPoint: CGPoint(x: textField.center.x - 5.0, y: textField.center.y))
+                animation.toValue = NSValue(cgPoint: CGPoint(x: textField.center.x + 5.0, y: textField.center.y))
+                textField.layer.add(animation, forKey: "position")
+            }
+        }
+    }
+    
+    private func loadingAction(status: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.logInButton.configuration?.showsActivityIndicator = status
+            self?.emailField.isUserInteractionEnabled = !status
+            self?.passwordField.isUserInteractionEnabled = !status
+            
+        }
+    }
+    
+    private func resetConfigurationField(key: UITextField? = nil) {
+        guard let textField = key,
+              let label = fieldWithError[textField]
+        else {
+            fieldWithError[emailField] = emailErrorLabel
+            fieldWithError[passwordField] = passwordErrorLabel
+            
+            
+            fieldWithError.forEach { (key: UITextField, value: UILabel) in
+                key.layer.borderColor = .none
+                key.layer.borderWidth = 0.0
+                
+                value.text = ""
+                value.isHidden = true
+            }
+            
+            fieldWithError = [:]
+            return
+        }
+        
+        textField.layer.borderColor = .none
+        textField.layer.borderWidth = 0.0
+        
+        label.text = ""
+        label.isHidden = true
+        
+        fieldWithError.removeValue(forKey: textField)
+        
     }
 }
 
 //MARK - Extension UITextField
-
 extension LogInView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        resetConfigurationField(key: textField)
+    }
 }
 
 //MARK: - Extension Output Presenter
 extension LogInView: LogInPresenterProtocolOutput {
+    func logInSuccess() {
+        print("Sucesss")
+    }
     
+    
+    func isLoading(status: Bool) {
+        loadingAction(status: status)
+    }
+    
+    func showError(on field: AuthField, withMessage message: String) {
+        
+        switch field {
+        case .email:
+            fieldWithError[emailField] = emailErrorLabel
+            showError(for: fieldWithError, withMessage: message)
+    
+        case .password:
+            fieldWithError[passwordField] = passwordErrorLabel
+            showError(for: fieldWithError, withMessage: message)
+            
+            
+        case .allFields:
+            fieldWithError[emailField] = emailErrorLabel
+            fieldWithError[passwordField] = passwordErrorLabel
+            
+            showError(for: fieldWithError, withMessage: message)
+            fieldWithError = [:]
+        case .confirmPassword:
+            break
+        }
+    }
 }
 
 

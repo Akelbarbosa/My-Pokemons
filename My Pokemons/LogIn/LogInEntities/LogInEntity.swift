@@ -13,20 +13,12 @@ protocol AuthFieldProtocol {
     var fields: [AuthField] { get }
 }
 
-
 enum AuthField {
     case email
     case password
     case confirmPassword
     case allFields
 }
-
-//enum SignUpFieldsEnum {
-//    case email
-//    case password
-//    case confirmPassword
-//}
-
 
 struct LogInEntity: AuthFieldProtocol {
     var email: String
@@ -35,7 +27,4 @@ struct LogInEntity: AuthFieldProtocol {
     var fields: [AuthField] {
         return [.email, .password, .allFields]
     }
-    
 }
-
-

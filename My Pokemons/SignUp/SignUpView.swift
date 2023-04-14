@@ -207,7 +207,7 @@ extension SignUpView {
         }
     }
     
-    private func signUpLoadingAction(status: Bool) {
+    private func loadingAction(status: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.signUpButton.configuration?.showsActivityIndicator = status
             self?.emailField.isUserInteractionEnabled = !status
@@ -274,8 +274,9 @@ extension SignUpView: UITextFieldDelegate {
 //MARK: - Extension Output Presenter
 extension SignUpView: SignUpPresenterProtocolOutput {
     func isLoading(status: Bool) {
-        signUpLoadingAction(status: status)
+        loadingAction(status: status)
     }
+    
     
     func showError(on field: AuthField, withMessage message: String) {
         

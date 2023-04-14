@@ -23,11 +23,12 @@ class LogInRouter: LogInRouterProtocol {
     func createModule() -> UIViewController? {
         singUpRouter = SignUpRouter()
         
-        let interactor = LogInInteractor()
+        let interactor = LogInInteractor(manager: ManagerFirebase.shared)
         let presenter = LogInPresenter(interactor: interactor, router: self)
         view = LogInView(presenter: presenter)
         
         presenter.output = view
+        interactor.output = presenter
         
         return view
     }

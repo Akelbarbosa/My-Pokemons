@@ -25,3 +25,7 @@
 "passwordIsShort" = "Le mot de passe doit comporter au moins 8 caractères.";
 "passwordsDifferent" = "Les mots de passe saisis ne correspondent pas.";
 "emailExist" = "L'e-mail est déjà enregistré.";
+
+"wrongPassword" = "Mot de passe incorrect";
+"userNotFound" = "Email non enregistré";
+

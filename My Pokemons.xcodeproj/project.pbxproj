@@ -12,6 +12,7 @@
 		C456708529D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C456708329D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld */; };
 		C456708729D4C3AB00B49DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C456708629D4C3AB00B49DF8 /* Assets.xcassets */; };
 		C456708A29D4C3AB00B49DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */; };
+		C460B8C029E9B02300AA9C93 /* LogInErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B8BF29E9B02300AA9C93 /* LogInErrors.swift */; };
 		C4955DFD29E4A5A9006FDEE2 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */; };
 		C4955DFF29E4A5C5006FDEE2 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */; };
 		C4955E0129E4A5E9006FDEE2 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */; };
@@ -45,6 +46,7 @@
 		C456708629D4C3AB00B49DF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C456708929D4C3AB00B49DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C456708B29D4C3AB00B49DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C460B8BF29E9B02300AA9C93 /* LogInErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInErrors.swift; sourceTree = "<group>"; };
 		C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
@@ -90,10 +92,7 @@
 		C456706E29D4C3A800B49DF8 = {
 			isa = PBXGroup;
 			children = (
-				C4A66B5129E8B62700E0EB8C /* Localizable.strings */,
 				C456707929D4C3A800B49DF8 /* My Pokemons */,
-				C4A66B3429E8625D00E0EB8C /* Utils */,
-				C4A66B1329E6193A00E0EB8C /* GoogleService-Info.plist */,
 				C456707829D4C3A800B49DF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,15 +108,17 @@
 		C456707929D4C3A800B49DF8 /* My Pokemons */ = {
 			isa = PBXGroup;
 			children = (
-				C4A66B2E29E7192000E0EB8C /* Extensions */,
-				C4A66B2B29E70EFB00E0EB8C /* Manager */,
+				C4A66B3429E8625D00E0EB8C /* Utils */,
 				C4955E0529E4A63F006FDEE2 /* Delegates */,
+				C4A66B2B29E70EFB00E0EB8C /* Manager */,
+				C4A66B2E29E7192000E0EB8C /* Extensions */,
+				C460B8BD29E9A00F00AA9C93 /* Localizables */,
 				C4A66B1E29E61F9800E0EB8C /* SignUp */,
 				C456709129D4C81500B49DF8 /* LogIn */,
 				C456708629D4C3AB00B49DF8 /* Assets.xcassets */,
-				C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */,
 				C456708B29D4C3AB00B49DF8 /* Info.plist */,
 				C456708329D4C3A800B49DF8 /* My_Pokemons.xcdatamodeld */,
+				C4A66B1329E6193A00E0EB8C /* GoogleService-Info.plist */,
 			);
 			path = "My Pokemons";
 			sourceTree = "<group>";
@@ -125,13 +126,31 @@
 		C456709129D4C81500B49DF8 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				C460B8BE29E9A62D00AA9C93 /* LogInEntities */,
 				C4955DFC29E4A5A9006FDEE2 /* LogInView.swift */,
 				C4955DFE29E4A5C5006FDEE2 /* LogInInteractor.swift */,
 				C4955E0029E4A5E9006FDEE2 /* LogInPresenter.swift */,
-				C4955E0629E4A6D1006FDEE2 /* LogInEntity.swift */,
 				C4955E0329E4A627006FDEE2 /* LogInRouter.swift */,
+				C460B8BF29E9B02300AA9C93 /* LogInErrors.swift */,
 			);
 			path = LogIn;
+			sourceTree = "<group>";
+		};
+		C460B8BD29E9A00F00AA9C93 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				C456708829D4C3AB00B49DF8 /* LaunchScreen.storyboard */,
+				C4A66B5129E8B62700E0EB8C /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		C460B8BE29E9A62D00AA9C93 /* LogInEntities */ = {
+			isa = PBXGroup;
+			children = (
+				C4955E0629E4A6D1006FDEE2 /* LogInEntity.swift */,
+			);
+			path = LogInEntities;
 			sourceTree = "<group>";
 		};
 		C4955E0529E4A63F006FDEE2 /* Delegates */ = {
@@ -282,6 +301,7 @@
 				C4A66B2029E6237700E0EB8C /* SignUpView.swift in Sources */,
 				C4A66B2629E623CF00E0EB8C /* SignUpRouter.swift in Sources */,
 				C456707B29D4C3A800B49DF8 /* AppDelegate.swift in Sources */,
+				C460B8C029E9B02300AA9C93 /* LogInErrors.swift in Sources */,
 				C4A66B2229E6239C00E0EB8C /* SignUpInteractor.swift in Sources */,
 				C4955E0429E4A627006FDEE2 /* LogInRouter.swift in Sources */,
 				C4A66B3A29E8679E00E0EB8C /* ErrorMessageLabel.swift in Sources */,
